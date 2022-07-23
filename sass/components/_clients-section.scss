@@ -1,0 +1,33 @@
+.clients-section {
+  &__list {
+    @extend %list;
+    @extend %flex-c-c;
+  }
+
+  &__logo-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--fill-icons-color);
+    fill: var(--fill-icons-color);
+    border-radius: 4px;
+
+    transition-property: border-color, fill;
+    transition-duration: var(--duration-of-transition);
+    transition-timing-function: var(--timing-func);
+  }
+
+  &__logo-link:hover,
+  &__logo-link:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}

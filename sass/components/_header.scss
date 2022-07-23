@@ -1,0 +1,94 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    @extend %flex-c-c;
+  }
+
+  &__nav {
+    @extend %flex-c-c;
+  }
+
+  &__logo {
+    margin-right: 93px;
+  }
+
+  &__list-nav {
+    @extend %flex-c-c;
+    @extend %list;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__nav-link {
+    @extend %link;
+    position: relative;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: inherit;
+    transition-property: color;
+    transition-duration: var(--duration-of-transition);
+    transition-timing-function: var(--timing-func);
+  }
+
+  &__nav-link:hover,
+  &__nav-link:focus {
+    color: var(--accent-color);
+  }
+
+  &__nav-link--current {
+    color: var(--accent-color);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__contacts-list {
+    @extend %list;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    list-style: none;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--text-color);
+    transition-property: color;
+    transition-duration: var(--duration-of-transition);
+    transition-timing-function: var(--timing-func);
+  }
+
+  &__contacts:hover,
+  &__contacts:focus {
+    color: var(--accent-color);
+  }
+  &__icon {
+    display: inline-block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

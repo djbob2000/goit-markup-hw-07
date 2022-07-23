@@ -1,0 +1,20 @@
+.features-section {
+  &__list {
+    @extend %list;
+    @extend %flex-c-c;
+  }
+
+  &__list-item {
+    flex-basis: 270px;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__descr {
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.71;
+  }
+}

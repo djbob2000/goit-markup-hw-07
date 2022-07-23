@@ -1,0 +1,62 @@
+.team-section {
+  background-color: var(--section-light-background);
+
+  &__list {
+    @extend %list;
+    @extend %flex-c-c;
+  }
+
+  &__team-card {
+    width: calc((100% - 3 * var(--card-set-gap)) / 4);
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__team-card:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__team-thumb {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__team-card-name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+
+  &__team-card-text {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 16px;
+  }
+  &__team-card-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--team-card-bg);
+    fill: var(--fill-icons-color);
+    transition-property: background-color, fill;
+    transition-duration: var(--duration-of-transition);
+    transition-timing-function: var(--timing-func);
+
+    &:hover {
+      background-color: var(--accent-color);
+      fill: var(--team-card-bg);
+    }
+  }
+
+  &__team-card-list-logo:not(:last-child) {
+    margin-right: 10px;
+  }
+}
