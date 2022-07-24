@@ -17,4 +17,14 @@
     color: var(--text-color);
     line-height: 1.71;
   }
+
+  &__icon-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background: var(--section-light-background);
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
 }

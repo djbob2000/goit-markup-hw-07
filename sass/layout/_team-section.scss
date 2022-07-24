@@ -50,7 +50,8 @@
     transition-duration: var(--duration-of-transition);
     transition-timing-function: var(--timing-func);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--accent-color);
       fill: var(--team-card-bg);
     }
